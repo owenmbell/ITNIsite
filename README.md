@@ -1,16 +1,70 @@
-# React + Vite
+# In The National Interest landing page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A cinematic, responsive one-page website for the feature film *In The National
+Interest*. The site introduces the film's premise, themes, visual direction,
+and production contact information.
 
-Currently, two official plugins are available:
+## Tech stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Vite
+- React
+- Plain CSS
 
-## React Compiler
+## Install dependencies
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Requires a current Node.js LTS release and npm.
 
-## Expanding the ESLint configuration
+```bash
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Run locally
+
+```bash
+npm run dev
+```
+
+Vite will print the local development URL, typically
+`http://localhost:5173`.
+
+## Build for production
+
+```bash
+npm run build
+```
+
+The optimized production site is generated in `dist/`. To inspect that build
+locally, run:
+
+```bash
+npm run preview
+```
+
+## Cloudflare Pages deployment
+
+Deployment is handled through Cloudflare Pages:
+
+1. Connect the GitHub repository to a Cloudflare Pages project.
+2. Select the Vite framework preset, or configure the build manually.
+3. Set the build command to `npm run build`.
+4. Set the build output directory to `dist`.
+5. Deploy from the production branch configured in Cloudflare Pages.
+
+Cloudflare Pages installs dependencies and runs the production build whenever
+the configured branch receives a new commit. Pull-request and non-production
+branches can also receive preview deployments when enabled in the Cloudflare
+Pages project settings.
+
+No runtime environment variables are currently required.
+
+## Placeholder content
+
+Before the public launch, review and replace:
+
+- `production@example.com` with the production team's real contact address.
+- CSS-generated visual-world panels with approved film stills or key art, if
+  final assets become available.
+- Development-status wording, production details, and the footer year as the
+  project evolves.
+- Social-sharing metadata with a canonical production URL and approved preview
+  image once the domain and artwork are finalized.
