@@ -28,6 +28,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background: #0c0e0f;
+  line-height: 1.5;
 }
 
 body::before {
@@ -47,6 +48,11 @@ a {
 
 a {
   color: inherit;
+}
+
+a:focus-visible {
+  outline: 1px solid #b7655c;
+  outline-offset: 5px;
 }
 
 ::selection {

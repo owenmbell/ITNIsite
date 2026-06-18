@@ -15,18 +15,21 @@ const visualPanels = [
     number: '01',
     label: 'The institution',
     caption: 'Power lives in the spaces no one sees.',
+    format: 'Interior / 2.39:1',
   },
   {
     className: 'visual-panel--archive',
     number: '02',
     label: 'The record',
     caption: 'Every secret leaves a paper trail.',
+    format: 'Insert / Archive',
   },
   {
     className: 'visual-panel--surveillance',
     number: '03',
     label: 'The watcher',
     caption: 'Trust is a vulnerability.',
+    format: 'Long lens / Night',
   },
 ]
 
@@ -77,6 +80,9 @@ function Hero() {
           </a>
         </div>
       </div>
+      <p className="hero-credit" aria-hidden="true">
+        An original motion picture
+      </p>
       <p className="hero-code" aria-hidden="true">
         FILE 7A-031 / AUTHORIZATION WITHHELD
       </p>
@@ -165,6 +171,7 @@ function VisualWorld() {
                 <h3>{panel.label}</h3>
                 <p>{panel.caption}</p>
               </div>
+              <span className="panel-format">{panel.format}</span>
             </div>
           </article>
         ))}
